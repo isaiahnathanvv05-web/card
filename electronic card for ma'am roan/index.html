@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Thank-You Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Pinyon+Script&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- STAGE: the closed envelope and the two centered buttons -->
+  <div class="stage" id="stage">
+    <div class="envelope" id="envelope">
+      <div class="env-back"></div>
+      <div class="env-paper"></div>
+      <div class="env-front"></div>
+      <!-- ✏️ EDIT 1a: Your teacher's name (written on the envelope) -->
+      <div class="env-to">For [Teacher/Professor’s Name]</div>
+      <div class="env-flap"></div>
+      <div class="env-seal" aria-hidden="true">♥</div>
+    </div>
+
+    <div class="actions">
+      <button id="openLetterBtn" type="button">Open</button>
+
+      <div id="dodger-slot">
+        <button id="dodger" type="button" aria-label="Do not open. This button runs away.">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c2456f" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+            <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+          </svg>
+          <span id="dodger-label">Do Not Open</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE LETTER: appears after the envelope opens -->
+  <main class="card" id="card">
+    <div class="card-inner">
+
+      <!-- ✏️ EDIT 1b: Your teacher's name (greeting) -->
+      <h1 class="greeting">Dear [Teacher/Professor’s Name],</h1>
+
+      <!-- ✏️ EDIT 2: Your main message (keep it to 2–3 short paragraphs) -->
+      <p class="message">
+        Thank you for everything you taught us this year. You never made us feel foolish for asking questions, even when
+        we asked the same one twice.
+      </p>
+      <p class="message">
+        Your patience and honest feedback pushed me to try harder than I thought I could.
+      </p>
+
+      <hr class="rule">
+
+      <!-- ✏️ EDIT 3: Your closing and name -->
+      <p class="signature-wrap">
+        <span class="closing">With sincere gratitude,</span>
+        <span class="signature">[Your Name]</span>
+      </p>
+
+      <button class="reveal-btn" id="revealBtn" type="button" aria-controls="secret" aria-expanded="false">
+        Open one more note
+      </button>
+
+      <!-- ✏️ EDIT 4: The hidden message revealed by the button -->
+      <div class="secret" id="secret" aria-live="polite">
+        <div>
+          <p>
+            Because of you, I stopped being afraid of getting things wrong and started learning from my mistakes. I will
+            carry that with me long after this class ends.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
